@@ -1,0 +1,109 @@
+
+<html>
+<head>
+<title>Ghosts</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Ghosts</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    function drawGhost(centerX, centerY, color){
+  var circle = new Circle(30);
+circle.setPosition(centerX, centerY);
+circle.setColor(color);
+add(circle);
+
+var rect = new Rectangle(60, 60);
+rect.setPosition(centerX - 30, centerY);
+rect.setColor(color);
+add(rect);
+
+var foot1 = new Circle(10);
+foot1.setPosition(centerX - 20, centerY + 60);
+foot1.setColor(color);
+add(foot1);
+
+var foot2 = new Circle(10);
+foot2.setPosition(centerX, centerY + 60);
+foot2.setColor(color);
+add(foot2);
+
+var foot3 = new Circle(10);
+foot3.setPosition(centerX + 20, centerY + 60);
+foot3.setColor(color);
+add(foot3);
+
+var eye1 = new Circle(10);
+eye1.setPosition(centerX + 15, centerY);
+eye1.setColor(Color.white);
+add(eye1);
+
+var eye2 = new Circle(10);
+eye2.setPosition(centerX - 15, centerY);
+eye2.setColor(Color.white);
+add(eye2);
+
+var pupil1 = new Circle(5);
+pupil1.setPosition(centerX + 18, centerY);
+pupil1.setColor(Color.blue);
+add(pupil1);
+
+var pupil2 = new Circle(5);
+pupil2.setPosition(centerX - 12, centerY);
+pupil2.setColor(Color.blue);
+add(pupil2);
+
+}
+
+function start(){
+    var centerX = getWidth()/2;
+    var centerY = getHeight()/2;
+    drawGhost(centerX, centerY, Color.red);
+    drawGhost(100,100, Color.green);
+    drawGhost(300, 200, Color.black);
+    drawGhost(40, 300, Color.orange);
+    drawGhost(300, 50, Color.yellow);
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

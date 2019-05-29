@@ -1,0 +1,62 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: rgb(99, 99, 99);
+  line-height: 1.8;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url('http://www.athens.edu/images/coas/programs/computer-science.jpg');
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+
+}
+#myNavbar {
+  background-color: rgb(230, 229, 229);
+}
+#timeline {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#webtitle {
+  text-align:center;
+  border-style: groove;
+}
+#introtitle {
+  border-style: groove;
+}
+#vr{
+  text-align:center;
+  border-style: groove;
+}
+#webdesign{
+border-style: groove;
+}

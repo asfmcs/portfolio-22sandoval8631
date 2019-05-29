@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Medal Standings</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Medal Standings</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    function start(){
+    var g14= readInt("Gold medals in 2014: ");
+    var s14= readInt("Silver medals in 2014: ");
+    var b14= readInt("Bronze medals in 2014: ");
+    var g18= readInt("Gold medals in 2018: ");
+    var s18= readInt("Silver medals in 2018: ");
+    var b18= readInt("Bronze medals in 2018: ");
+    var t14= g14 + s14 + b14;
+    var t18= g18 + s18 + b18;
+    var gt= g14-g18;
+    var st= s14-s18;
+    var bt= b14-b18;
+    var tt= t14-t18;
+    println( );
+    println( );
+    println("-------------------------------------------------");
+    println("USA 2014 vs 2018 Olympic Winter Games Medal Count");
+    println("-------------------------------------------------");
+    println("       2014                 2018           Change");
+    println("-------------------------------------------------");
+    println("Gold:     " + g14 + "                   " + g18 + "               " + gt);
+    println( );         
+    println("Silver:   " + s14 + "                   " + s18 + "               " + st);
+    println( );
+    println("Bronze:   " + b14 + "                   " + b18 + "               " + bt);
+    println("-------------------------------------------------");
+    println("Total:    " + t14 + "                  " + t18 + "               " + tt);
+    
+    
+    
+    
+    
+ 
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
